@@ -20,8 +20,11 @@ client = Client(n_workers=2, threads_per_worker=2, processes=True)
 file_path = '/content/drive/MyDrive/austin_house_listings.zip'
 df = dd.read_csv(file_path, compression='zip', blocksize=None)
 ```
+
 Результат:
+
 <img width="1280" height="841" alt="image" src="https://github.com/user-attachments/assets/b19920c8-ab48-4903-8e8f-46c3dcc47d46" />
+
 
 ## Шаг 2. Transform (Трансформация и очистка данных)
 
@@ -56,7 +59,9 @@ df_dropped.head()
 
 **Результат очистки:**
 Удалены избыточные и практически пустые столбцы, что повышает эффективность последующего анализа.
+
 <img width="1680" height="838" alt="image" src="https://github.com/user-attachments/assets/e3f8edad-a51a-4d63-a10c-8d38005fd7e6" />
+
 
 ## Шаг 3. Load (Загрузка / Сохранение результатов)
 
@@ -65,8 +70,11 @@ df_dropped.head()
 ```python
 df_dropped.to_parquet('cleaned_austin_listings.parquet', engine='pyarrow')
 ```
+
 Результат:
+
 <img width="1754" height="275" alt="image" src="https://github.com/user-attachments/assets/621361f8-5e11-4e56-aafa-b2fc458d65d1" />
+
 
 ## Визуализация DAG
 
@@ -89,8 +97,11 @@ z = delayed(add)(x, y)
 z.visualize()
 print("Результат вычисления DAG:", z.compute())
 ```
+
 Результат: 
+
 <img width="350" height="275" alt="image" src="https://github.com/user-attachments/assets/b19920c8-ab48-4903-8e8f-46c3dcc47d46" />
+
 
 ### 2. Сложный граф (Map-Reduce Process)
 
@@ -107,8 +118,11 @@ total = delayed(sum)(layer2)
 total.visualize()
 print("Итоговый результат сложного DAG:", total.compute())
 ```
+
 Результат:
+
 <img width="350" height="275" alt="image" src="https://github.com/user-attachments/assets/62396996-78ae-4b71-a54e-6dea9403fa7a" />
+
 
 ## #5 Аналитика (Altair)
 
@@ -127,6 +141,9 @@ chart1 = alt.Chart(df_sample).mark_circle(size=60).encode(
 ).interactive()
 chart1.display()
 ```
+
 Результаты аналитики:
+
 <img width="1011" height="615" alt="image" src="https://github.com/user-attachments/assets/f6dcfc8b-9225-403a-bb77-75c2d8300996" />
+
 <img width="954" height="613" alt="image" src="https://github.com/user-attachments/assets/595dd4bf-3756-4717-95cc-97369e7a94c1" />
