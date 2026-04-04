@@ -12,7 +12,7 @@
 
 ## Шаг 1. Подготовка базы данных
 
-Перед запуском ETL-процесса необходимо создать структуру таблиц в вашей базе данных (mgpu_ico_etl_14). Выполните следующий SQL-скрипт через phpMyAdmin или DBeaver:
+Перед запуском ETL-процесса необходимо создать структуру таблиц в базе данных (mgpu_ico_etl_14). Выполнить следующий SQL-скрипт через phpMyAdmin или DBeaver:
 ```SQL
 -- 1. Таблица заказов (фактов)
 DROP TABLE IF EXISTS orders;
@@ -48,7 +48,7 @@ CREATE TABLE customers (
  INDEX idx_region (region)
 );
 ```
-Пример Успешногго выполнения:
+Пример Успешного выполнения:
 <img width="1678" height="959" alt="image" src="https://github.com/user-attachments/assets/59c1ff9c-a687-49d2-8789-d75597abcd65" />
 
 ```
@@ -66,7 +66,7 @@ CREATE TABLE products (
  INDEX idx_subcategory (sub_category)
 );
 ```
-Пример Успешногго выполнения:
+Пример Успешного выполнения:
 <img width="1677" height="953" alt="image" src="https://github.com/user-attachments/assets/508247b1-d70d-4418-8d12-5135b8a45188" />
 
 
@@ -81,14 +81,14 @@ ALTER TABLE orders CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ALTER TABLE customers CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ALTER TABLE products CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ```
-Пример Успешногго выполнения:
+Пример Успешного выполнения:
 <img width="1682" height="955" alt="image" src="https://github.com/user-attachments/assets/c9bdad4e-af67-4695-a611-00ff633bbbd4" />|
 
 <img width="1682" height="964" alt="image" src="https://github.com/user-attachments/assets/b339ede3-3d11-44c9-92d1-ab8175ce342d" />
 
 ## Шаг 2. Настройка Job (Главного задания)
 
-**Set Variables: Создайте переменную пути к файлу.**
+**Set Variables: Создание переменной пути к файлу.**
 <img width="1851" height="986" alt="image" src="https://github.com/user-attachments/assets/30436c56-70c0-4398-b25f-dfa19e24c2f6" />
 
 **Check File Exists: Проверка наличия файла ${CSV_FILE_PATH}.**
@@ -103,7 +103,7 @@ ALTER TABLE products CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
 ## Шаг 3. Реализация Трансформаций (Transformations)
 ### Трансформация 1. Load Orders
 
-**Select Values. Установите типы данных (Date format: dd.MM.yyyy для дат, Integer для ID).**
+**Select Values. Установка типов данных (Date format: dd.MM.yyyy для дат, Integer для ID).**
 <img width="1543" height="813" alt="image" src="https://github.com/user-attachments/assets/da67bf9c-d5ba-40a3-9a3b-0fdc7f4215f1" />
 
 **Memory Group By. Используется для дедупликации (группировка по row_id, взятие первых значений по остальным полям).**
@@ -120,7 +120,7 @@ ALTER TABLE products CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
 
 ### Трансформация 2. Load Customers
 
-**Select Values. Оставьте только поля, относящиеся к клиенту (customer_id, name, city и т.д.).**
+**Select Values. Оставить только поля, относящиеся к клиенту (customer_id, name, city и т.д.).**
 <img width="1558" height="802" alt="image" src="https://github.com/user-attachments/assets/1e56c5f6-0181-47a7-b1f7-1609e623deec" />
 
 **Memory Group By. Группировка по customer_id (устранение дублей клиентов).**
@@ -131,7 +131,7 @@ ALTER TABLE products CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
 
 ### Трансформация 3. Load Products
 
-**Select Values. Оставьте поля продукта (product_id, category, name и т.д.).**
+**Select Values. Оставить поля продукта (product_id, category, name и т.д.).**
 <img width="1556" height="825" alt="image" src="https://github.com/user-attachments/assets/84179f2f-b952-4fab-9073-1653388bc7bb" />
 
 
