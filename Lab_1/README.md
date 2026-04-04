@@ -49,4 +49,4 @@
 ## Файлы:
 [Исходный CSV](https://github.com/user-attachments/files/26479538/DigitalAd_dataset.3.csv)
 
-[Файл трансформации]([main/lab_01/Lab_01.ktr](https://github.com/KharlamovaAnn/ETL/blob/main/Lab_1/Lab_1.ktr))
+[Файл трансформации](https://github.com/KharlamovaAnn/ETL/blob/main/Lab_1/Lab_1.ktr)
