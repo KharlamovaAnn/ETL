@@ -98,88 +98,88 @@ ALTER TABLE products CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
 
 **Set Variables: Создание переменной пути к файлу.**
 
-<img width="1851" height="986" alt="image" src="https://github.com/user-attachments/assets/30436c56-70c0-4398-b25f-dfa19e24c2f6" />
-
+<img width="1851" height="986" alt="image" src="https://github.com/user-attachments/assets/30436c56-70c0-4398-b25f-dfa19e24c2f6" /> <br2/>
 
 **Check File Exists: Проверка наличия файла ${CSV_FILE_PATH}.**
 
-<img width="1634" height="920" alt="image" src="https://github.com/user-attachments/assets/8a64025a-17ad-4d13-9f2c-6414b47f8401" />
+<img width="1634" height="920" alt="image" src="https://github.com/user-attachments/assets/8a64025a-17ad-4d13-9f2c-6414b47f8401" /> <br3/>
 
 **HTTP (Download): Загрузка файла, если его нет.**
 
-<img width="1853" height="991" alt="image" src="https://github.com/user-attachments/assets/80ee30b3-e30c-4638-ab29-370e9f3db8c9" />
+<img width="1853" height="991" alt="image" src="https://github.com/user-attachments/assets/80ee30b3-e30c-4638-ab29-370e9f3db8c9" /> <br4/>
 
 **Transformation. Последовательный вызов трех трансформаций для загрузки данных.**
 
-<img width="1845" height="987" alt="image" src="https://github.com/user-attachments/assets/93b0e4f5-2d58-41e3-ad3e-7e18d18d866b" />
+<img width="1845" height="987" alt="image" src="https://github.com/user-attachments/assets/93b0e4f5-2d58-41e3-ad3e-7e18d18d866b" /> <br5/>
 
 ## Шаг 3. Реализация Трансформаций (Transformations)
 ### Трансформация 1. Load Orders
 
 **Select Values. Установка типов данных (Date format: dd.MM.yyyy для дат, Integer для ID).**
 
-<img width="1543" height="813" alt="image" src="https://github.com/user-attachments/assets/da67bf9c-d5ba-40a3-9a3b-0fdc7f4215f1" />
+<img width="1543" height="813" alt="image" src="https://github.com/user-attachments/assets/da67bf9c-d5ba-40a3-9a3b-0fdc7f4215f1" /> <br6/>
 
 **Memory Group By. Используется для дедупликации (группировка по row_id, взятие первых значений по остальным полям).**
 
-<img width="1116" height="891" alt="image" src="https://github.com/user-attachments/assets/79948fb0-ef6d-499e-aebb-0342b2ba1984" />
+<img width="1116" height="891" alt="image" src="https://github.com/user-attachments/assets/79948fb0-ef6d-499e-aebb-0342b2ba1984" /> <br7/>
 
 **Filter Rows (Валидация)**
 * Условие: order_date IS NOT NULL AND ship_date IS NOT NULL, данные за 1-ый квартал 2016
 * TRUE -> Table Output (в таблицу orders).
 * FALSE -> Write to Log (логирование ошибок).
-* 
-<img width="1083" height="724" alt="image" src="https://github.com/user-attachments/assets/d6eb0730-c9d0-4494-8251-56466f40efbe" />
+
+  
+<img width="1083" height="724" alt="image" src="https://github.com/user-attachments/assets/d6eb0730-c9d0-4494-8251-56466f40efbe" /> <br8/>
 
 **Value Mapper. Преобразование поля Returned: Yes -> 1, No -> 0, Empty -> 0.**
 
-<img width="918" height="401" alt="image" src="https://github.com/user-attachments/assets/e2716c4b-51d4-4676-8cb4-53f2c09ccb86" />
+<img width="918" height="401" alt="image" src="https://github.com/user-attachments/assets/e2716c4b-51d4-4676-8cb4-53f2c09ccb86" /> <br9/>
 
 ### Трансформация 2. Load Customers
 
 **Select Values. Оставить только поля, относящиеся к клиенту (customer_id, name, city и т.д.).**
 
-<img width="1558" height="802" alt="image" src="https://github.com/user-attachments/assets/1e56c5f6-0181-47a7-b1f7-1609e623deec" />
+<img width="1558" height="802" alt="image" src="https://github.com/user-attachments/assets/1e56c5f6-0181-47a7-b1f7-1609e623deec" /> <br10/>
 
 **Memory Group By. Группировка по customer_id (устранение дублей клиентов).**
 
-<img width="1118" height="874" alt="image" src="https://github.com/user-attachments/assets/10b6f329-36d5-4b2a-bc37-541ae6f284bf" />
+<img width="1118" height="874" alt="image" src="https://github.com/user-attachments/assets/10b6f329-36d5-4b2a-bc37-541ae6f284bf" /> <br11/>
 
 **Table Output. Загрузка в таблицу customers.**
 
-<img width="1013" height="726" alt="image" src="https://github.com/user-attachments/assets/20e79f19-520b-47f1-b0ea-608d8bc1c181" />
+<img width="1013" height="726" alt="image" src="https://github.com/user-attachments/assets/20e79f19-520b-47f1-b0ea-608d8bc1c181" /> <br12/>
 
 ### Трансформация 3. Load Products
 
 **Select Values. Оставить поля продукта (product_id, category, name и т.д.).**
 
-<img width="1556" height="825" alt="image" src="https://github.com/user-attachments/assets/84179f2f-b952-4fab-9073-1653388bc7bb" />
+<img width="1556" height="825" alt="image" src="https://github.com/user-attachments/assets/84179f2f-b952-4fab-9073-1653388bc7bb" /> <br13/>
 
 
 **Memory Group By. Группировка по product_id.**
 
-<img width="1119" height="871" alt="image" src="https://github.com/user-attachments/assets/3ab8df07-dfc8-488e-b2a7-18c9d4b5b175" />
+<img width="1119" height="871" alt="image" src="https://github.com/user-attachments/assets/3ab8df07-dfc8-488e-b2a7-18c9d4b5b175" /> <br14/>
 
 
 **Table Output. Загрузка в таблицу products.**
 
-<img width="943" height="719" alt="image" src="https://github.com/user-attachments/assets/b17e94a6-a2d8-45bc-ba1f-9902639b64eb" />
+<img width="943" height="719" alt="image" src="https://github.com/user-attachments/assets/b17e94a6-a2d8-45bc-ba1f-9902639b64eb" /> <br15/>
 
 ## Шаг 4 Выполнение доп заданий
 ## Общий вид
 
-<img width="1627" height="560" alt="image" src="https://github.com/user-attachments/assets/3ed60f03-76d3-44b8-b52c-d92a80c73553" />
+<img width="1627" height="560" alt="image" src="https://github.com/user-attachments/assets/3ed60f03-76d3-44b8-b52c-d92a80c73553" /> <br16/>
 
 ### Выполнение трансформаци для 1 задания:
 
-<img width="1847" height="638" alt="image" src="https://github.com/user-attachments/assets/05003cba-4376-4277-be64-92e2cf601ecf" />
+<img width="1847" height="638" alt="image" src="https://github.com/user-attachments/assets/05003cba-4376-4277-be64-92e2cf601ecf" /> <br17/>
 
 ## Общий вид
-<img width="1626" height="895" alt="image" src="https://github.com/user-attachments/assets/2a7d9188-b051-46be-b62e-887cf79f6f61" />
+<img width="1626" height="895" alt="image" src="https://github.com/user-attachments/assets/2a7d9188-b051-46be-b62e-887cf79f6f61" /> <br18/>
 
 ### Выполнение трансформаци для 2 задания:
 
-<img width="1847" height="991" alt="image" src="https://github.com/user-attachments/assets/1d44c6a6-7609-4870-8b1d-9d35ebb89896" />
+<img width="1847" height="991" alt="image" src="https://github.com/user-attachments/assets/1d44c6a6-7609-4870-8b1d-9d35ebb89896" /> <br19/>
 
 
 ## Проверка данных
