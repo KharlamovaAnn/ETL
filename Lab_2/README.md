@@ -100,6 +100,7 @@ ALTER TABLE products CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
 
 <img width="1851" height="986" alt="image" src="https://github.com/user-attachments/assets/30436c56-70c0-4398-b25f-dfa19e24c2f6" />
 
+
 **Check File Exists: Проверка наличия файла ${CSV_FILE_PATH}.**
 
 <img width="1634" height="920" alt="image" src="https://github.com/user-attachments/assets/8a64025a-17ad-4d13-9f2c-6414b47f8401" />
