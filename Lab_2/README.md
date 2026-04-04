@@ -203,14 +203,14 @@ ALTER TABLE products CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
 
 # Файлы
 
-[Файл Job](/Files/JobCSV.kjb).
+[Файл Job](https://github.com/KharlamovaAnn/ETL/blob/main/Lab_2/Files/Job%20CSV.kjb)
 
-[Файл Transformations orders](/Files/lab_2_1_csv_orders.ktr)
+[Файл Transformations orders](https://github.com/KharlamovaAnn/ETL/blob/main/Lab_2/Files/lab_2_1_csv_orders.ktr)
 
-[Файл Transformations products](Files/lab_2_3_csv_to_products.ktr)
+[Файл Transformations products](https://github.com/KharlamovaAnn/ETL/blob/main/Lab_2/Files/lab_2_3_csv_to_products.ktr)
 
-[Файл Transformations customers](Files/lab_2_2_csv_to_Customers.ktr)
+[Файл Transformations customers](https://github.com/KharlamovaAnn/ETL/blob/main/Lab_2/Files/lab_2_2_csv_to_Customers.ktr)
 
-[Отчет по регионам](Files/zadanie_1.ktr)
+[Отчет по регионам](https://github.com/KharlamovaAnn/ETL/blob/main/Lab_2/Files/zadanie_1.ktr)
 
-[Анализ возвратов](Files/zadanie_2.ktr)
+[Анализ возвратов](https://github.com/KharlamovaAnn/ETL/blob/main/Lab_2/Files/zadanie_2.ktr)
