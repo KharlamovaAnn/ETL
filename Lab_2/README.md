@@ -96,7 +96,7 @@ ALTER TABLE products CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
 
 ## Шаг 2. Настройка Job (Главного задания)
 
-**Set Variables: Создание переменной пути к файлу.**
+**Set Variables: Создание переменного пути к файлу.**
 
 <img width="1851" height="986" alt="image" src="https://github.com/user-attachments/assets/30436c56-70c0-4398-b25f-dfa19e24c2f6" /> <br2/>
 
