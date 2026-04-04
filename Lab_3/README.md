@@ -56,7 +56,7 @@ CREATE TABLE call_logs (
 );
 ```
 
-<img width="1847" height="766" alt="image" src="https://github.com/user-attachments/assets/177eb3da-ed85-46c1-8243-e24ce20e22ad" />
+<img width="1847" height="766" alt="image" src="https://github.com/user-attachments/assets/177eb3da-ed85-46c1-8243-e24ce20e22ad" /> <br1/>
 
 
 Вид таблицы:
@@ -101,7 +101,7 @@ CREATE TABLE IF NOT EXISTS call_center_analytics (
 );
 ```
 
-<img width="1564" height="564" alt="image" src="https://github.com/user-attachments/assets/e77a4444-3c19-4b22-9cd3-2e214ed301ad" />
+<img width="1564" height="564" alt="image" src="https://github.com/user-attachments/assets/e77a4444-3c19-4b22-9cd3-2e214ed301ad" /> <br2/>
 
 
 Вид таблицы:
