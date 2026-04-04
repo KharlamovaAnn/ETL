@@ -108,4 +108,5 @@ SELECT
 FROM call_center_analytics
 GROUP BY topic_name, operator_performance_category;
 ```
+
 <img width="1562" height="504" alt="image" src="https://github.com/user-attachments/assets/c788bc8b-c88c-493a-82bb-a0d86712690b" />
