@@ -47,6 +47,7 @@
 
 
 ## Файлы:
-[Исходный CSV](lab_01/DigitalAd_dataset.csv)
+[Исходный CSV]([operator_kpi.xlsx](https://github.com/user-attachments/files/26478725/operator_kpi.xlsx)
+)
 
-[Файл трансформации](main/lab_01/Lab_01.ktr)
+[Файл трансформации]([main/lab_01/Lab_01.ktr](https://github.com/KharlamovaAnn/ETL/blob/main/Lab_1/Lab_1.ktr))
