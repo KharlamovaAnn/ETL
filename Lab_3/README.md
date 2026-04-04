@@ -55,24 +55,34 @@ CREATE TABLE call_logs (
     duration_sec INT
 );
 ```
+
 <img width="1847" height="766" alt="image" src="https://github.com/user-attachments/assets/177eb3da-ed85-46c1-8243-e24ce20e22ad" />
 
+
 Вид таблицы:
+
 <img width="1851" height="960" alt="image" src="https://github.com/user-attachments/assets/66c65b56-4ab2-4fbc-8fb0-0441988946a3" />
+
 
 
 ## Шаг 3. Разработка трансформации в Pentaho (Spoon)
 
 Общий вид трансформации:
+
 <img width="1492" height="721" alt="image" src="https://github.com/user-attachments/assets/d3028783-2a54-4e6f-89bc-e1d45c40d227" />
+
 
 ### Настройка основных узлов
 
 #### Подключение PostgreSQL:
+
 <img width="1122" height="780" alt="image" src="https://github.com/user-attachments/assets/a8321fdc-127a-4c64-8d64-af01bf506ed3" />
 
+
 #### Подключение файлов:
+
 <img width="1705" height="756" alt="image" src="https://github.com/user-attachments/assets/c8f39731-f570-4f76-b702-7bec3f25d3ee" />
+
 
 #### Фильтрация:
 
@@ -90,7 +100,9 @@ CREATE TABLE IF NOT EXISTS call_center_analytics (
     duration_sec INT
 );
 ```
+
 <img width="1564" height="564" alt="image" src="https://github.com/user-attachments/assets/e77a4444-3c19-4b22-9cd3-2e214ed301ad" />
+
 
 Вид таблицы:
 
