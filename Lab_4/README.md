@@ -62,8 +62,6 @@ df_dropped.head()
 
 <img width="1352" height="670" alt="Снимок экрана 2026-04-07 020503" src="https://github.com/user-attachments/assets/c95ba518-a66f-4149-a99d-f7e6192286c4" />
 
-<img width="1680" height="838" alt="image" src="https://github.com/user-attachments/assets/e3f8edad-a51a-4d63-a10c-8d38005fd7e6" />
-
 
 ## Шаг 3. Load (Загрузка / Сохранение результатов)
 
