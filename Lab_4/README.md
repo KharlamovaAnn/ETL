@@ -23,7 +23,7 @@ df = dd.read_csv(file_path, compression='zip', blocksize=None)
 
 Результат:
 
-<img width="1280" height="841" alt="image" src="https://github.com/user-attachments/assets/b19920c8-ab48-4903-8e8f-46c3dcc47d46" />
+<img width="1308" height="496" alt="Снимок экрана 2026-04-07 020357" src="https://github.com/user-attachments/assets/f03e0ad2-5abf-4899-9a0f-b2852a8b825d" />
 
 
 ## Шаг 2. Transform (Трансформация и очистка данных)
@@ -58,7 +58,9 @@ df_dropped.head()
 ```
 
 **Результат очистки:**
-Удалены избыточные и практически пустые столбцы, что повышает эффективность последующего анализа.
+В результате мы можем видеть, что исходные данные уже предоставлены в очищенном виде:
+
+<img width="1352" height="670" alt="Снимок экрана 2026-04-07 020503" src="https://github.com/user-attachments/assets/c95ba518-a66f-4149-a99d-f7e6192286c4" />
 
 <img width="1680" height="838" alt="image" src="https://github.com/user-attachments/assets/e3f8edad-a51a-4d63-a10c-8d38005fd7e6" />
 
@@ -73,7 +75,7 @@ df_dropped.to_parquet('cleaned_austin_listings.parquet', engine='pyarrow')
 
 Результат:
 
-<img width="1754" height="275" alt="image" src="https://github.com/user-attachments/assets/621361f8-5e11-4e56-aafa-b2fc458d65d1" />
+<img width="661" height="166" alt="Снимок экрана 2026-04-07 020535" src="https://github.com/user-attachments/assets/a38af63c-4d25-4875-a4f6-0920c6da5beb" />
 
 
 ## Визуализация DAG
@@ -100,7 +102,7 @@ print("Результат вычисления DAG:", z.compute())
 
 Результат: 
 
-<img width="350" height="275" alt="image" src="https://github.com/user-attachments/assets/b19920c8-ab48-4903-8e8f-46c3dcc47d46" />
+<img width="551" height="684" alt="Снимок экрана 2026-04-07 020554" src="https://github.com/user-attachments/assets/70a017db-a0a7-4291-992d-797bd5473f0f" />
 
 
 ### 2. Сложный граф (Map-Reduce Process)
@@ -121,7 +123,7 @@ print("Итоговый результат сложного DAG:", total.compute
 
 Результат:
 
-<img width="350" height="275" alt="image" src="https://github.com/user-attachments/assets/62396996-78ae-4b71-a54e-6dea9403fa7a" />
+<img width="850" height="730" alt="Снимок экрана 2026-04-07 020629" src="https://github.com/user-attachments/assets/10b30988-0bc7-4d4d-86a0-3eb1d1427c92" />
 
 
 ## #5 Аналитика (Altair)
@@ -144,6 +146,7 @@ chart1.display()
 
 Результаты аналитики:
 
-<img width="1011" height="615" alt="image" src="https://github.com/user-attachments/assets/f6dcfc8b-9225-403a-bb77-75c2d8300996" />
+<img width="1095" height="589" alt="Снимок экрана 2026-04-07 020708" src="https://github.com/user-attachments/assets/44d79a2e-4908-4b91-9009-be6a0f4bd2de" />
 
-<img width="954" height="613" alt="image" src="https://github.com/user-attachments/assets/595dd4bf-3756-4717-95cc-97369e7a94c1" />
+<img width="950" height="651" alt="Снимок экрана 2026-04-07 020716" src="https://github.com/user-attachments/assets/9e233c59-db49-4bba-a68a-ec27e735fab1" />
+
