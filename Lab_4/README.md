@@ -68,7 +68,7 @@ df_dropped.head()
 Очищенный датасет сохраняется в формате Parquet, который обеспечивает высокую скорость чтения/записи и оптимизированное хранение в приложениях Big Data.
 
 ```python
-df_dropped.to_parquet('cleaned_austin_listings.parquet', engine='pyarrow')
+df_dropped.to_parquet('output_path', engine='pyarrow')
 ```
 
 Результат:
