@@ -478,15 +478,22 @@ docker compose logs init
    * Авторизуйтесь (логин: `admin`, пароль: `admin`).
    * Найдите ваш DAG в списке, снимите его с паузы (переключатель слева) и запустите вручную, нажав кнопку **Play (▶)** ➜ **Trigger DAG**.
    * Дождитесь успешного выполнения всех задач (статус поменяется на темно-зеленый "Success"). Данные скачаются, обработаются и сохранится модель.
-![alt text](images/image.png)
+
+<img width="1916" height="496" alt="image1" src="https://github.com/user-attachments/assets/d570805a-45cd-491b-bfba-c2acafa618aa" />
+
 2. **Просмотр визуализации (Streamlit):**
    * Перейдите по адресу [http://localhost:8501](http://localhost:8501).
    * На открывшемся дашборде вы увидите очищенную таблицу данных и итоговую таблицу средних температур по рабочим дням.
-![alt text](images/image-1.png)
-![alt text](images/image-2.png)
-![alt text](images/image-3.png)
+
+
+<img width="1802" height="773" alt="image-2" src="https://github.com/user-attachments/assets/c68f4bb1-cd5f-48b9-8e85-3496216b724e" />
+
+<img width="1822" height="784" alt="image-3" src="https://github.com/user-attachments/assets/3b8f26ad-2e90-4d5c-9b54-b301506bb930" />
+
 3. Прогнозирование продаж:
-![alt text](images/image-4.png)
+
+<img width="1062" height="163" alt="image-4" src="https://github.com/user-attachments/assets/7dcb1207-edf3-4681-ba83-dfc9c865cbf3" />
+
 ### Выключение проекта и полная очистка ресурсов
 После успешного завершения работы необходимо остановить сервисы, удалить контейнеры, очистить сеть, тома данных (volumes) и собранные образы.
 
