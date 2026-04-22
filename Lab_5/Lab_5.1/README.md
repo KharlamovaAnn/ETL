@@ -54,7 +54,7 @@ graph TD
 * **Визуализация:** Streamlit, Matplotlib
 * **База данных:** PostgreSQL 12 (для метаданных Airflow)
 
-## Описание DAG (`variant_14_warsaw`)
+## Описание DAG (`variant_18`)
 Пайплайн состоит из следующих задач (Task):
 1. **`fetch_weather_forecast`**: Обращается к Open-Meteo, получает прогноз для **Стокгольма** на 3 дня, сохраняет в `weather_forecast.csv`.
 2. **`clean_weather_data`**: Заполняет пропуски, вычисляет и **добавляет столбец "день недели"** и флаг рабочего дня, сохраняет в `clean_weather.csv`.
