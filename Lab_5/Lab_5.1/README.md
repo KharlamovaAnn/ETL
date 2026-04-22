@@ -437,7 +437,7 @@ else:
 
 ```bash
 sudo chown -R 50000:0 ./data
-sudo chown -R dev:dev /home/dev/Downloads/practice/business_case_umbrella_25
+sudo chown -R dev:dev /home/dev/Downloads/Lab_5/business_case_umbrella_26
 ```
 ### Подготовка и сборка кастомного образа
 Поскольку в проекте используются дополнительные библиотеки (Pandas, Scikit-learn, Streamlit и др.), перед запуском оркестратора необходимо собрать кастомный Docker-образ из `Dockerfile`. 
